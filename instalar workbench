@@ -1,0 +1,10 @@
+#instalar worbench con dependencias de forma automatica porque sino da errores
+# Actualizar la lista de paquetes e instalar snapd si no está instalado
+sudo apt update
+sudo apt install snapd
+
+# Instalar MySQL Workbench usando Snap
+sudo snap install mysql-workbench-community
+
+# Iniciar MySQL Workbench
+mysql-workbench-community

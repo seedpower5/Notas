@@ -1,0 +1,7 @@
+//comando iniciar intelilly
+intellij-idea-community
+//comando iniciar visualcode
+code
+//comando para abrir postman
+postman
+

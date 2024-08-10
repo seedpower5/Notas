@@ -1,0 +1,62 @@
+Para clonar un repositorio de GitHub usando SSH, necesitas seguir estos pasos:
+
+    Configura tu clave SSH:
+    Si aún no has configurado una clave SSH en tu máquina, sigue estos pasos:
+
+        Genera una nueva clave SSH si no tienes una:
+
+        sh
+
+ssh-keygen -t ed25519 -C "tu_correo@example.com"
+
+O, si estás usando una versión anterior de SSH:
+
+sh
+
+ssh-keygen -t rsa -b 4096 -C "tu_correo@example.com"
+
+Añade tu clave SSH al agente SSH:
+
+sh
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+O, si usaste RSA:
+
+sh
+
+ssh-add ~/.ssh/id_rsa
+
+Copia la clave SSH a tu portapapeles:
+
+sh
+
+cat ~/.ssh/id_ed25519.pub
+
+O, si usaste RSA:
+
+sh
+
+    cat ~/.ssh/id_rsa.pub
+
+    Añade la clave SSH a tu cuenta de GitHub:
+        Ve a GitHub y navega a Settings.
+        En el menú lateral, selecciona SSH and GPG keys.
+        Haz clic en New SSH key.
+        Pega tu clave SSH y da un nombre descriptivo, luego haz clic en Add SSH key.
+
+Obtén la URL SSH del repositorio:
+
+    Ve al repositorio de tu amigo en GitHub.
+    Haz clic en el botón verde Code.
+    Selecciona la opción SSH y copia la URL. Debe tener el formato git@github.com:usuario/repositorio.git.
+
+Clona el repositorio usando la URL SSH:
+Abre una terminal y ejecuta el siguiente comando, reemplazando git@github.com:usuario/repositorio.git con la URL SSH del repositorio:
+
+sh
+
+    git clone git@github.com:usuario/repositorio.git
+
+Siguiendo estos pasos, podrás clonar el repositorio de GitHub a tu máquina local usando SSH.

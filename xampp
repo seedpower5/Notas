@@ -1,0 +1,14 @@
+#comandos Xammp
+#instalar xampp
+ir a xammp instalar.run
+#dar permisos en el directorio descargas
+chmod +x xampp-linux-x64-8.2.4-0-installer.run
+#ejecuta la instalacion
+sudo ./xampp-linux-x64-8.2.4-0-installer.run
+#iniciar 
+sudo /opt/lampp/lampp start
+#status
+sudo /opt/lampp/lampp start
+#abrir interfaz grafica 
+sudo /opt/lampp/manager-linux-x64.run
+

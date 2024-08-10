@@ -1,0 +1,38 @@
+Mover la carpeta extraída a /opt:
+
+sh
+
+sudo mv Postman /opt/Postman
+
+Crear un enlace simbólico para facilitar el acceso:
+
+sh
+
+sudo ln -s /opt/Postman/Postman /usr/bin/postman
+
+Crear un archivo de escritorio para Postman:
+
+sh
+
+sudo nano /usr/share/applications/postman.desktop
+
+Añadir la siguiente información al archivo (puedes copiar y pegar esto):
+
+plaintext
+
+[Desktop Entry]
+Name=Postman
+Exec=/opt/Postman/Postman
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Type=Application
+Categories=Development;
+
+Guardar el archivo y salir del editor (en nano, presiona Ctrl+X, luego Y, y finalmente Enter).
+
+Postman debería ahora estar disponible en tu menú de aplicaciones y también puedes abrirlo desde la terminal:
+
+sh
+
+    postman
+
+Con estos pasos, deberías tener Postman instalado y listo para usar en tu sistema.

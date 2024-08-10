@@ -1,0 +1,36 @@
+#Angular 17
+#httpClientModule esta deprecated se usa un provider actualmente
+#hay que añadir esta linea en el archivo .conf para que no marque fallo en variables vacias 
+"strictPropertyInitialization": false,
+
+#IMPORTS BÁSICOS
+import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
+#COMANDOS BÁSICOS
+#comando para inizializar proyecto 
+ng serve 
+#comando para crear una clase
+ng g class nombre-de-la-clase
+#comando para crear un service
+ng g s nombre-del-servicio
+#comando para crear un nuevo componente 
+ng g c nombre-del-componente
+
+#FUNCIONES 
+#las funciones se especifican en el archivo .service desde el cual se llama en los.ts necesarios 
+  private baseUrl = "http://localhost:8080/api/v1/empleados";
+ obtenerListaEmpleados():Observable<Empleado[]>
+ {
+    return this.hhtpClient.get<Empleado[]>(`${this.baseUrl}`);
+ }
+ 
+ #PROBLEMA RECURRENTE HHTPMODULECLIENT
+ 
+    Usa provideHttpClient() en app.config.ts para asegurarte de que HttpClient esté disponible en toda la aplicación.
+    No importes HttpClientModule directamente en los componentes standalone.
+    Mantén la estructura standalone pero administra proveedores globales a través del archivo de configuración.
+
+Esto debería resolver el problema de NullInjectorError: No provider for HttpClient.

@@ -1,0 +1,20 @@
+//existen varias formas de subir repositorios a git como generar tokens o mediante ssh(más seguro)
+//ssh clave
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHG/QWFNEqeIYf7RNm4i3VKCJmGRMkbGGzuOQRmHHB/f jbalmoriarenas@gmail.com
+
+
+
+//inizializar repositorio
+git init
+//añadir archivos
+git add .
+//commit 
+git commit -m "Primer commit"
+//añadir a repositorio remoto
+git remote add origin <URL_DEL_REPOSITORIO>
+//comprobar que la url es correcta 
+git remote -v
+//Empuja el Proyecto al Repositorio Remoto
+git push -u origin master
+
+
